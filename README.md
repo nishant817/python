@@ -1,6 +1,4 @@
-
-[a relative link](cheatsheets/dict.md) [a relative link](cheatsheets/list.md)
-[a relative link](cheatsheets/queue.md) [a relative link](cheatsheets/dict.md)
+|| [Misc](cheatsheets/catchall.md) | [Collections](cheatsheets/collections.md) | [Queue/Stack](cheatsheets/queue.md) ||
 
 
 Repo details
