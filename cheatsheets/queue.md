@@ -1,4 +1,4 @@
-|| [Misc](cheatsheets/catchall.md) | [Collections](cheatsheets/collections.md) | [Queue/Stack](cheatsheets/queue.md) ||
+|| [Misc](catchall.md) | [Collections](collections.md) | [Queue/Stack](queue.md) ||
 
 # Queue
 
