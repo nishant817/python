@@ -1,37 +1,44 @@
 
 
 # Misc
+   * MAX & MIN values
+      * `sys.maxsize`  --> 9223372036854775807
+      * `- sys.maxsize - 1` --> -9223372036854775808
+      * `high=math.inf`
+      * `low=-math.inf`
+      * `Maxval = float('inf')` 
    * `x = max(y, z)`    -- max of y and z
-   * `freq = Counter(wordsList)`  -> create a dictionary with with the frequency of each word
+   * `freq = Counter(wordsList)`  -> create a dictionary with the frequency of each word
    * `sorted(freq.items(), key = lambda x: (-x[1], x[0]))`
-      * sort it by freequency and in lexicographic order
+      * sort it by frequency and in lexicographic order
    * check: https://leetcode.com/problems/top-k-frequent-words/discuss/1859025/Python
    * `bin(num)`
       * binary string of num prefixed with 0b. e.g. bin(5) = 0b101
-   * `MAXInteger: sys.maxsize`
-      * 9223372036854775807
-   * `MIN Integer: - sys.maxsize - 1` 
-      * -9223372036854775808
    * `x = a if <condition> else b`   --> ternary Operator
    * Char to Num (ASCII)
       * `n = ord('a')`  --> n = 97
       * `ch = chr(ord('a') + 1)` --> ch = 'b'
-   * Touple
-      * Used to store multiple items in a single variable
-      * unchangeable --> cannot change, add or remove items after the tuple has been created
-      * Allows duplicate
-      * can contain mixed data types
-      * `mytuple = ("apple", "banana", "cherry")`
-      * `print mytuple[1]` --> "banana"
-      * `len(mytuple)`
-      * Convert tuple to list
-         * `lst = list(mytuple)`
-      * Convert list to tuple
-         * `newtuple = tuple(lst)`
-      * Iterate
-         * `for x in mytuple`
-      * `mytuple.count(obj)`  --> count of obj in tuple
-      * `mytuple.index(obj)`  --> index of obj
+   
+
+# Touple
+   * Used to store multiple items in a single variable
+   * unchangeable --> cannot change, add or remove items after the tuple has been created
+   * Allows duplicate
+   * can contain mixed data types
+   * `mytuple = ("apple", "banana", "cherry")`
+   * `print mytuple[1]` --> "banana"
+   * `len(mytuple)`
+   * Convert tuple to list
+      * `lst = list(mytuple)`
+   * Convert list to tuple
+      * `newtuple = tuple(lst)`
+   * Iterate
+      * `for x in mytuple`
+   * `mytuple.count(obj)`  --> count of obj in tuple
+   * `mytuple.index(obj)`  --> index of obj
+   * Random number
+      * `rint = random.randint(left, right)`
+   * `x = divmod(5, 2)` # quotient and the remainder. X: (2,1)
    
 
 <br>
@@ -45,6 +52,10 @@ https://www.w3schools.com/python/python_ref_string.asp
    * all characters except the last 4 characters and the 1st character: `strObj[1:-4]`
    * every other character: `strObj[::2]`
    * `.find(sub, start, end)`   -> returns the lowest index of the substring if it is found; else -1
+   * Split string
+      * `txt = "apple#banana#cherry#orange"`
+      *  `txt.split(“#”)`  → ['apple', 'banana', 'cherry', 'orange']
+      *  `txt(split(“#”, 1)`    → ['apple', 'banana#cherry#orange']
 
 <br>
 
@@ -112,6 +123,10 @@ https://www.w3schools.com/python/python_ref_dictionary.asp
    * `dict[key] = value`
    * `if key in dict` # check if exists
    * add or update: `dict[obj] = dict.setdefault(obj, 0) + 1`
+   * defaultdict: if key doesn't exist, assign a default value. won't throw error
+      * `dd = defaultdict(lambda: "NA")` --> dd[nonexistingkey] will return "NA"
+      * `dd = defaultdict(list)`  --> empty list
+      * `dd = defaultdict(int)`   --> 0
    * iterate
 	   * `for key in dict`  #iterate though keys
 		* `for key, val in dict.items()`  #better way
@@ -198,6 +213,24 @@ https://www.w3schools.com/python/python_ref_dictionary.asp
 <br>
 
 
+## Definitions for
+### singly-linked list
+```
+class ListNode:
+   def __init__(self, val=0, next=None):  
+      self.val = val  
+      self.next = next  
+```
+
+### binary tree node
+```
+class TreeNode:  
+   def __init__(self, val=0, left=None, right=None):  
+      self.val = val  
+      self.left = left  
+      self.right = right  
+```
+
 # Space Complexity
    * sorting: Nlog(N)
    * heap: log(N)
@@ -205,3 +238,5 @@ https://www.w3schools.com/python/python_ref_dictionary.asp
 ### TODO/Add  
 touple details  
 deepcopy 2/3D array  
+zip function
+sorted function
